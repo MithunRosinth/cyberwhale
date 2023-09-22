@@ -29,6 +29,7 @@ RUN apt install -y terraform
 RUN apt install -y ansible
 RUN apt install -y awscli
 RUN apt install -y kubernetes-helm
+RUN apt install -y azure-cli
 
 
 RUN apt install -y apt-transport-https ca-certificates
@@ -36,8 +37,5 @@ RUN curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | gpg --d
 RUN echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | tee /etc/apt/sources.list.d/kubernetes.list
 RUN apt update
 RUN apt install -y kubectl
-
-RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
-
 
 ENTRYPOINT ["/usr/bin/zsh"]
