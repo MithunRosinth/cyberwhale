@@ -18,13 +18,11 @@ RUN apt install -y wordlists
 RUN apt install -y gobuster
 RUN apt install -y ffuf
 RUN apt install -y whatweb
-RUN apt install -y powershell
 RUN apt install -y lynis
 RUN apt install -y gophish
 RUN apt install -y amass
 RUN apt install -y dnsenum
 RUN apt install -y python3-scapy
-RUN apt install -y evil-winrm
 RUN apt install -y terraform
 RUN apt install -y ansible
 RUN apt install -y awscli
