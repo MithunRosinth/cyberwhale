@@ -1,7 +1,8 @@
 FROM kalilinux/kali-rolling
 
-RUN apt update && apt -y install kali-linux-headless
+RUN apt update
 
+RUN apt install -y aircrack-ng crackmapexec hydra john metasploit-framework nmap responder sqlmap
 RUN apt install -y curl
 RUN apt install -y theharvester
 RUN apt install -y john-data
@@ -28,7 +29,6 @@ RUN apt install -y terraform
 RUN apt install -y ansible
 RUN apt install -y awscli
 RUN apt install -y kubernetes-helm
-RUN apt install -y 
 
 
 RUN apt install -y apt-transport-https ca-certificates
